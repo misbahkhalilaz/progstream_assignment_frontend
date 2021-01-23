@@ -1,6 +1,9 @@
 import React, { useEffect, useState } from "react";
 import { Row, Col, InputNumber } from "antd";
 
+// ass this app has very little number of components, thats why all are placed in single app file
+
+// inner child component
 const PkgComp = ({ name, price, qty }) => {
   return (
     <Col
@@ -28,10 +31,7 @@ const PkgComp = ({ name, price, qty }) => {
   );
 };
 
-const Totals = ({ name, qty }) => {
-  return;
-};
-
+// parent component
 const Master = ({ list }) => {
   const [req, setReq] = useState({
     bottles: 0,
@@ -149,6 +149,7 @@ const Master = ({ list }) => {
   );
 };
 
+// main app component
 export default function App(props) {
   const [priceList, setPriceList] = useState([]);
 
