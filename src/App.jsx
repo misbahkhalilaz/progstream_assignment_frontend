@@ -73,7 +73,7 @@ const Master = ({ list }) => {
                 redirect: "follow",
               };
 
-              fetch("http://localhost:4000", requestOptions)
+              fetch("https://ps-assign-backend.herokuapp.com/", requestOptions)
                 .then((response) => response.json())
                 .then((result) => {
                   console.log(result);
@@ -159,7 +159,7 @@ export default function App(props) {
       redirect: "follow",
     };
 
-    fetch("http://localhost:4000/data", requestOptions)
+    fetch("https://ps-assign-backend.herokuapp.com/data", requestOptions)
       .then((response) => response.json())
       .then(({ pricelist }) => setPriceList(pricelist))
       .catch((error) => console.log("error", error));
